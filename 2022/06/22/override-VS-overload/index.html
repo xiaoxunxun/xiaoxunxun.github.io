@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="训练不起来怎么办, Hexo">
-    <meta name="description" content="Small Batch vs Large Batch
-速度上或许我们会认为Large batch会更慢，但GPU的并行运算就导致当batch的数量不是特别多时，时间几乎与batch&amp;#x3D;1相同；总的时间large更占优势，比如6000">
+    <meta name="keywords" content="override VS overload, Hexo">
+    <meta name="description" content="override
+它其实是子类对父类的一种继承，即对父类方法进行重写，重写后的方法是子类独有的，重写过程中参数不可改变。
+overload
+重载是对某一名称函数的一种复用，此时的复用不具有子类父类关系，若子类中对父类的方法进行重载，那么子类">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +22,7 @@
 
     
 
-    <title>训练不起来怎么办 | Hexo</title>
+    <title>override VS overload | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -310,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">训练不起来怎么办</h1>
+                    <h1 class="description center-align post-title">override VS overload</h1>
                 </div>
             </div>
         </div>
@@ -429,17 +431,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/machine/">
-                                <span class="chip bg-color">machine</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -451,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-06-22
                 </div>
                 
 
@@ -472,25 +466,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>Small Batch vs Large Batch</strong></p>
-<p>速度上或许我们会认为Large batch会更慢，但GPU的并行运算就导致当batch的数量不是特别多时，时间几乎与batch&#x3D;1相同；总的时间large更占优势，比如60000个，batch&#x3D;1和batch&#x3D;100比较，单次的时间几乎相同，但前者要运行600000次，而后者运行60次，后者运行时间更少；前者的梯度下降会有很多noisy,但最终精确度更好，因为更多noisy就不会卡在一个地方，比如一个梯度为0，另一个梯度就会非0，此时就可以继续走下去，而batch很大时就不会有这种纠错的”noisy“。</p>
-<p><strong>Momentum</strong></p>
-<p>将动量加上，这样就最大程度上避免了鞍点和极小值点的被卡住，当恰好在临界点时能通过自带动量（惯性）往前继续走，运动方向应是梯度与原先运动方向的矢量和方向。</p>
-<p><strong>learning rate adapts dynamically</strong></p>
-<p><img src="https://s2.loli.net/2022/05/26/s5BVJTZIh4v2DGz.png"></p>
-<p>这里我们可以看到当gt比较和缓（小）时，σt对应也小，（η&#x2F;σt变大）那对应步伐就要迈大。</p>
-<p><img src="https://s2.loli.net/2022/05/26/iaWpC65eAq1xtkB.png"></p>
-<p>这是一个没有论文根据的神奇方法，跟上面类似。</p>
-<p><img src="https://s2.loli.net/2022/05/26/kOX8HEDQvuMWqUd.png"></p>
-<p>这里的σ是统计数据，所以warm up开始时先探索一番，搜集一些情报，再往下走。</p>
-<p><strong>loss</strong></p>
-<p>x通过network-&gt;y-&gt;softmax-&gt;y&#96;,此时与y^比较（损失）</p>
-<p>softmax将y变成[-1,1]间的数，便于比较</p>
-<p>*Minimizing cross-entropy is equivalent to maximizing likelihood.</p>
-<p>cross-entropy比mean square error更好，后者容易陷入临界点走不出来。</p>
-<p><strong>batch Normalization</strong></p>
-<p><img src="https://s2.loli.net/2022/05/26/CmQXT1neruSWzg9.png"></p>
-<p>这里暂时有点懵，日后补上</p>
+                <p><strong>override</strong></p>
+<p>它其实是子类对父类的一种继承，即对父类方法进行重写，重写后的方法是子类独有的，重写过程中参数不可改变。</p>
+<p><strong>overload</strong></p>
+<p>重载是对某一名称函数的一种复用，此时的复用不具有子类父类关系，若子类中对父类的方法进行重载，那么子类与父类该方法互为重载，参数一定要发生改变，无论是类型，还是数目都可</p>
 
                 
             </div>
@@ -517,7 +496,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/05/26/%E8%AE%AD%E7%BB%83%E4%B8%8D%E8%B5%B7%E6%9D%A5%E6%80%8E%E4%B9%88%E5%8A%9E/">http://example.com/2022/05/26/%E8%AE%AD%E7%BB%83%E4%B8%8D%E8%B5%B7%E6%9D%A5%E6%80%8E%E4%B9%88%E5%8A%9E/</a>
+                    <a href="http://example.com/2022/06/22/override-VS-overload/">http://example.com/2022/06/22/override-VS-overload/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,15 +533,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/machine/">
-                                    <span class="chip bg-color">machine</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -738,13 +709,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/06/14/%E5%A4%9A%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                <a href="/2022/06/22/hashcode%E7%9A%84%E5%A4%A7%E6%8F%AD%E7%A7%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="多种设计模式">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="hashcode的大揭秘">
                         
-                        <span class="card-title">多种设计模式</span>
+                        <span class="card-title">hashcode的大揭秘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -755,7 +726,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
                         </span>
                         <span class="publish-author">
                             
@@ -775,13 +746,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/22/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%88%9D%E8%AF%86/">
+                <a href="/2022/06/14/delegation%E7%9A%84%E5%85%84%E5%BC%9F%E5%A7%90%E5%A6%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="机器学习-深度学习初识">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="delegation的兄弟姐妹">
                         
-                        <span class="card-title">机器学习-深度学习初识</span>
+                        <span class="card-title">delegation的兄弟姐妹</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,7 +763,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
                             </span>
                         <span class="publish-author">
                             
@@ -801,18 +772,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/machine/">
-                        <span class="chip bg-color">machine</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
                 </div>
                 
             </div>
