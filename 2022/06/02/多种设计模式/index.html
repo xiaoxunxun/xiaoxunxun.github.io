@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hashcode的大揭秘, Hexo">
-    <meta name="description" content="1.hashcode主要跟equal有关，当equal函数不改变，hashcode也就不发生改变
-2.等价类的hashcode一定相同，而不等价类的hashcode可以相同也可以不同，相同的话查找起来会麻烦一些
-">
+    <meta name="keywords" content="多种设计模式, Hexo">
+    <meta name="description" content="creational patterns
+Factory:创建一个接口，将“生产”过程延续到多种子类
+Structural patterns
+Adapter：将某个类转换成client期望的形式
+Decorator：将每个特征都写成一个类，可">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +23,7 @@
 
     
 
-    <title>hashcode的大揭秘 | Hexo</title>
+    <title>多种设计模式 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hashcode的大揭秘</h1>
+                    <h1 class="description center-align post-title">多种设计模式</h1>
                 </div>
             </div>
         </div>
@@ -444,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-06-22
+                    2022-06-02
                 </div>
                 
 
@@ -465,8 +467,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>1.hashcode主要跟equal有关，当equal函数不改变，hashcode也就不发生改变</p>
-<p>2.等价类的hashcode一定相同，而不等价类的hashcode可以相同也可以不同，相同的话查找起来会麻烦一些</p>
+                <p><strong>creational patterns</strong></p>
+<p>Factory:创建一个接口，将“生产”过程延续到多种子类</p>
+<p><strong>Structural patterns</strong></p>
+<p>Adapter：将某个类转换成client期望的形式</p>
+<p>Decorator：将每个特征都写成一个类，可以随意组合</p>
+<p><strong>Behavioral patterns</strong></p>
+<p>Strategy：可以通过接口的不同子类对算法的使用更加灵活</p>
+<p>template ：共有特征可以作为父类，私有特征在子类中补充，“差一（亿）点点”</p>
+<p>Iterator：迭代器，顾名思义，可解决循环遍历remove-List的bug</p>
+<p>visitor：不改变类中对象，通过委托在外面实现对内部对象的操作。</p>
 
                 
             </div>
@@ -493,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/06/22/hashcode%E7%9A%84%E5%A4%A7%E6%8F%AD%E7%A7%98/">http://example.com/2022/06/22/hashcode%E7%9A%84%E5%A4%A7%E6%8F%AD%E7%A7%98/</a>
+                    <a href="http://example.com/2022/06/02/%E5%A4%9A%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">http://example.com/2022/06/02/%E5%A4%9A%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -702,12 +712,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/06/14/delegation%E7%9A%84%E5%85%84%E5%BC%9F%E5%A7%90%E5%A6%B9/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="delegation的兄弟姐妹">
+                        
+                        <span class="card-title">delegation的兄弟姐妹</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/22/hashcode%E7%9A%84%E5%A4%A7%E6%8F%AD%E7%A7%98/">
+                <a href="/2022/05/26/hashcode%E7%9A%84%E5%A4%A7%E6%8F%AD%E7%A7%98/">
                     <div class="card-image">
                         
                         
@@ -724,45 +770,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/06/22/override-VS-overload/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="override VS overload">
-                        
-                        <span class="card-title">override VS overload</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
                             </span>
                         <span class="publish-author">
                             
